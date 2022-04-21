@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<div>  
+Beck Depresyon Ölçeği <input type="checkbox" id="beckdep" onclick="beckdepresyontikla()">
+Beck Anksiyete Ölçeği <input type="checkbox" id="beckank" onclick="beckanksiyetetikla()">
+Brown Okb Ölçeği <input type="checkbox" id="brownokb" onclick="brownokbtikla()">
+Liebowitz Ölçeği <input type="checkbox" id="liebowitz" onclick="liebowitztikla()" >
+</div>
+<br>
+<div>
+Puki Ölçeği <input type="checkbox" id="puki" onclick="pukitikla()">
+Psikolojik Belirti Ölçeği <input type="checkbox" id="psikolojikbelirti" onclick="psikolojikbelirtitikla()">
+Uyku Önerileri <input type="checkbox" id="uyku" onclick="uykutikla()">
+Gevşeme Egzersizleri <input type="checkbox" id="gevseme" onclick="gevsemetikla()">
+</div>
+<br>
+<div>
+  <form method="POST" action="index.php">
+    <label for="telefonnumarasi">Telefon Numarası: </label>
+    <input type="text" name="telefon" id="telefon">
+    <div>
+        <br>
+    <textarea name="metin" id="metin" cols="100" rows="30"></textarea>
+</div>
+<div>
+    <br>
+    <input type="submit" value="Giriş yap">
+</div>
+    </form>
+</div>
+<br>
+
+<br>
+<br>
+<div> 
+
+    <!-- <button onclick="oneToN()">Gönder </button> -->
+</div>
+
+
+</form>
+
+<!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+
+<script> 
+
+
+
+
+
+var yazi="";
+var sira;
+var harfsayi;
+var telefon;
+var yazihamilton = "Beck Depresyon Ölçeğini başlatmak için gerekli olan link: https://forms.gle/WJQJzPsAf5RdBmAZ6";
+var yazibeck = " Beck Anksiyete Ölçeğini başlatmak için gerekli olan link: https://forms.gle/weJSGcqKQaAn4w9RA" ;
+var yazibrown = " Yale Brown Okb Ölçeğini başlatmak için gerekli olan link: https://forms.gle/9TwHJnv4UBuQZE2K6";
+var yaziliebowitz = " Liebowitz Sosyal Fobi Ölçeğini başlatmak için gerekli olan link: https://forms.gle/VVZBzRSSy7D865HT8";
+var yazipuki = " Puki İndeksini başlatmak için gerekli olan link: https://forms.gle/3Hryquc42nBb5nZW6";
+var yazipsikolojikbelirti = " Psikolojik belirti ölçeğini başlatmak için gerekli olan link: https://forms.gle/LBEovk2gPiEcbQoD8";
+var yaziuyku = " Uykuyla ilgili önerileri görüntülemek için gerekli olan link: https://sites.google.com/sakarya.edu.tr/saupsikiyatri/hastalara-bilgiler/uyku-hijyeni";
+var yazigevseme = " Gevşeme teknikleri ile  ilgili önerileri görüntülemek için gerekli olan link: https://sites.google.com/sakarya.edu.tr/saupsikiyatri/hastalara-bilgiler/gev%C5%9Feme-teknikleri";
+
+
+var beckdepresyon=document.getElementById("beckdep");
+var beckanksiyete=document.getElementById("beckank");
+var brownokb=document.getElementById("brownokb");
+var liebowitz=document.getElementById("liebowitz");
+var puki=document.getElementById("puki");
+var psikolojikbelirti=document.getElementById("psikolojikbelirti");
+var uyku=document.getElementById("uyku");
+var gevseme=document.getElementById("gevseme");
+var telefonnumarasi=document.getElementById("telefon");
+var metin=document.getElementById("metin");
+
+
+
+function beckdepresyontikla(){
+if(beckdepresyon.checked==true)
+{
+yazi=yazi+yazihamilton;
+}
+else
+{
+    // sira=yazi.indexOf(yazihamilton);
+    // harfsayi=yazihamilton.length;
+    yazi=yazi.replace(yazihamilton,"");
+}
+metin.textContent=yazi;
+
+}
+function beckanksiyetetikla(){
+    if(beckanksiyete.checked==true)
+    {
+    yazi=yazi+yazibeck;
+    }
+    else
+    {
+        // sira=yazi.indexOf(yazihamilton);
+        // harfsayi=yazihamilton.length;
+        yazi=yazi.replace(yazibeck,"");
+    }
+    metin.textContent=yazi;
+    
+    }
+
+    function brownokbtikla(){
+        if(brownokb.checked==true)
+        {
+        yazi=yazi+yazibrown;
+        }
+        else
+        {
+            // sira=yazi.indexOf(yazihamilton);
+            // harfsayi=yazihamilton.length;
+            yazi=yazi.replace(yazibrown,"");
+        }
+        metin.textContent=yazi;
+        
+        }
+function liebowitztikla(){
+            if(liebowitz.checked==true)
+            {
+            yazi=yazi+yaziliebowitz;
+            }
+            else
+            {
+                // sira=yazi.indexOf(yazihamilton);
+                // harfsayi=yazihamilton.length;
+                yazi=yazi.replace(yaziliebowitz,"");
+            }
+            metin.textContent=yazi;
+            
+            }
+function pukitikla(){
+             if(puki.checked==true)
+               {
+                yazi=yazi+yazipuki;
+                }
+                else
+                {
+                    // sira=yazi.indexOf(yazihamilton);
+                    // harfsayi=yazihamilton.length;
+                    yazi=yazi.replace(yazipuki,"");
+                }
+                metin.textContent=yazi;
+                
+                }
+  function psikolojikbelirtitikla(){
+                    if(psikolojikbelirti.checked==true)
+                    {
+                    yazi=yazi+yazipsikolojikbelirti;
+                    }
+                    else
+                    {
+                        // sira=yazi.indexOf(yazihamilton);
+                        // harfsayi=yazihamilton.length;
+                        yazi=yazi.replace(yazipsikolojikbelirti,"");
+                    }
+                    metin.textContent=yazi;
+                    
+                    }
+  function uykutikla(){
+                        if(uyku.checked==true)
+                        {
+                        yazi=yazi+yaziuyku;
+                        }
+                        else
+                        {
+                            // sira=yazi.indexOf(yazihamilton);
+                            // harfsayi=yazihamilton.length;
+                            yazi=yazi.replace(yaziuyku,"");
+                        }
+                        metin.textContent=yazi;
+                        
+                        }
+  function gevsemetikla(){
+                            if(gevseme.checked==true)
+                            {
+                            yazi=yazi+yazigevseme;
+                            }
+                            else
+                            {
+                                // sira=yazi.indexOf(yazihamilton);
+                                // harfsayi=yazihamilton.length;
+                                yazi=yazi.replace(yazigevseme,"");
+                            }
+                            metin.textContent=yazi;
+                            
+                            }
+
+</script>
+
+</body>
+</html>
+
